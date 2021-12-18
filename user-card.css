@@ -1,2 +1,53 @@
 @import url(./reset.css);
+*{
+    box-sizing: border-box;    
+}
+.wrapper{
+    width: 250px;
+    height: 350px;
+    font-family: sans-serif;
+    margin: 0 auto;
+    padding: 15px;
 
+    background-color: rgb(113, 188, 250);
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 320px;
+    font-size: 1.2em;
+    color: rgb(250, 250, 250);
+    font-weight: 500;
+}
+.user-card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 1px 0px 6px 5px rgba(34, 60, 80, 0.16);
+}
+.overlay{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.349);
+    color: rgb(250, 250, 250);
+    font-size: 0.8em;
+    
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    transition: height linear 1s;
+
+}
+.wrapper:hover .overlay{
+    height: 55%;
+}
